@@ -1,0 +1,29 @@
+[
+  {
+    "consignee": "路飞",
+    "fullAddress": "伟大航路拉夫德鲁",
+    "id": "1",
+    "isDefault": "1",
+    "phoneNum": "1033057993",
+    "userAddress": "伟大航路拉夫德鲁",
+    "tradeNo": "10330579932"
+  },
+  {
+    "consignee": "二仙桥大爷",
+    "fullAddress": "二仙桥走成华大道",
+    "id": "2",
+    "isDefault": "0",
+    "phoneNum": "1478523698",
+    "userAddress": "二仙桥走成华大道",
+    "tradeNo": "1033057993"
+  },
+  {
+    "consignee": "羊圆",
+    "fullAddress": "新世界一艾尔巴夫",
+    "id": "3",
+    "isDefault": "0",
+    "phoneNum": "1544125887",
+    "userAddress": "新世界一艾尔巴夫",
+    "tradeNo": "10330579935"
+  }
+]
