@@ -1,28 +1,32 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <template>
+  <div class="bg">
+    <Header/>
+    <!--路由组件出自的地方 -->
+    <router-view></router-view>
+    <!--在Home Search显示在注册登录时隐藏-->
+    <Footer v-show="$route.meta.show"></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//引入组件
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {//注册组件
+    Header,
+    Footer
+  },
+  mounted() {
+    //通知Vuex发请求获取数据，存储在仓库中 由于在Home Search都有每一次挂载完毕后都得执行 所以把它放在App目录下 数据是不变的储存一次就行了
+    this.$store.dispatch('home/categoryList')
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+ <style lang="less" scoped>
+ .bg{
+   background-color: whitesmoke;
+ }
+ </style>
